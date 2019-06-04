@@ -1,0 +1,14 @@
+[package]
+name = "imagecli"
+version = "0.1.0"
+authors = ["David Bosschaert <bosschae@adobe.com>"]
+edition = "2018"
+
+[dependencies]
+imagelib = { path = "../imagelib" }
+
+[profile.release]
+opt-level = 'z'  # Optimize for size.
+lto = true
+panic = 'abort'
+
